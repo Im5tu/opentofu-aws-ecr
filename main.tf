@@ -43,8 +43,7 @@ data "aws_iam_policy_document" "ecr_access" {
         "ecr:InitiateLayerUpload",
         "ecr:ListImages",
         "ecr:PutImage",
-        "ecr:UploadLayerPart",
-        "ecr:GetAuthorizationToken"
+        "ecr:UploadLayerPart"
       ]
 
       principals {
