@@ -1,7 +1,9 @@
 module "example" {
   source = "../.."
 
-  # TODO: Add required variables
+  repo_name             = "example-repo"
+  push_principal_access = []
+
   tags = {
     Environment = "example"
   }
