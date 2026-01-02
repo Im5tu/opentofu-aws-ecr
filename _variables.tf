@@ -31,3 +31,15 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "kms_key_arn" {
+  description = "The ARN of the KMS key to use for encryption. If not provided, AES256 encryption is used."
+  type        = string
+  default     = null
+}
+
+variable "scan_on_push" {
+  description = "Whether to enable image scanning on push."
+  type        = bool
+  default     = true
+}

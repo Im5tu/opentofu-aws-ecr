@@ -3,6 +3,15 @@ resource "aws_ecr_repository" "ecr" {
   tags                 = var.tags
   image_tag_mutability = var.tag_mutability
   force_delete         = true
+
+  encryption_configuration {
+    encryption_type = var.kms_key_arn != null ? "KMS" : "AES256"
+    kms_key         = var.kms_key_arn
+  }
+
+  image_scanning_configuration {
+    scan_on_push = var.scan_on_push
+  }
 }
 
 resource "aws_ecr_repository_policy" "ecr" {
