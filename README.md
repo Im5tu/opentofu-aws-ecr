@@ -6,7 +6,7 @@ OpenTofu module for creating AWS ECR repositories with security best practices.
 
 ```hcl
 module "ecr" {
-  source = "git::https://github.com/im5tu/opentofu-aws-ecr.git?ref=main"
+  source = "git::https://github.com/im5tu/opentofu-aws-ecr.git?ref=2a89a082a1a3f421f2dd78814838bc14ff5b1316"
 
   repo_name             = "my-application"
   push_principal_access = ["arn:aws:iam::123456789012:role/github-actions"]
@@ -21,7 +21,7 @@ module "ecr" {
 
 ```hcl
 module "ecr" {
-  source = "git::https://github.com/im5tu/opentofu-aws-ecr.git?ref=main"
+  source = "git::https://github.com/im5tu/opentofu-aws-ecr.git?ref=2a89a082a1a3f421f2dd78814838bc14ff5b1316"
 
   repo_name             = "my-application"
   push_principal_access = ["arn:aws:iam::123456789012:role/github-actions"]
